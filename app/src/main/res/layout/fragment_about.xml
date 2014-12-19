@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView 
+        android:id="@+id/iv_logo"
+        android:contentDescription="logo"
+        android:layout_height="72dp"
+        android:layout_width="72dp"
+        android:src="@drawable/ic_launcher"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"/>
+    
+    <TextView 
+        android:id="@+id/tv_logo"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="找点亮-HectorXda荣誉出品"
+        android:layout_marginTop="2dp"
+        android:textSize="14sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/iv_logo"/>
+    
+    <TextView 
+        android:id="@+id/tv_version"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="v1.0.0"
+        android:layout_marginTop="2dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_logo"/>
+    
+    <TextView 
+        android:id="@+id/tv_copy"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Copyright © 2014 Sanshisoft.com"
+        android:layout_marginBottom="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+    
+    <RelativeLayout 
+        android:id="@+id/auther1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@drawable/news_item_bg"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+        android:layout_below="@+id/tv_version"
+        android:layout_marginTop="10dp">
+        
+        <ImageView 
+            android:id="@+id/iv_auther1"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/auther1"/>
+        
+        <TextView 
+            android:id="@+id/tv_name1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="HectorXda"
+            android:layout_toRightOf="@+id/iv_auther1"
+            android:layout_marginLeft="8dp"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+        
+        <TextView 
+            android:id="@+id/tv_contri1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Android Coder，程序开发，代码狗，苦逼屌丝"
+            android:layout_toRightOf="@+id/iv_auther1"
+            android:layout_below="@+id/tv_name1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"/>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/auther2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@drawable/news_item_bg"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/auther1">
+        
+        
+        <ImageView 
+            android:id="@+id/iv_auther2"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/auther2"/>
+        
+        <TextView 
+            android:id="@+id/tv_name2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="SinkIllusion"
+            android:layout_toRightOf="@+id/iv_auther2"
+            android:layout_marginLeft="8dp"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+        
+        <TextView 
+            android:id="@+id/tv_contri2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Designer,UI设计，爱好二次元，动漫狗"
+            android:layout_toRightOf="@+id/iv_auther2"
+            android:layout_below="@+id/tv_name2"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"/>
+        
+    </RelativeLayout>
+    
+</RelativeLayout>

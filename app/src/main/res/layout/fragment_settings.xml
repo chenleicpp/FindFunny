@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dip" >
+
+            <TextView
+                android:id="@+id/item_rc_app"
+                style="@style/TextSettingItem"
+                android:layout_marginTop="8dip"
+                android:background="@drawable/round_corner_item_above_bg"
+                android:drawableLeft="@drawable/ic_app_normal"
+                android:text="应用推荐" 
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/item_checkupdate"
+                style="@style/TextSettingItem"
+                android:background="@drawable/round_corner_item_middle_bg"
+                android:drawableLeft="@drawable/ic_download_pressed"
+                android:text="检测更新" />
+
+            <LinearLayout
+                android:id="@+id/item_clear_cache"
+                style="@style/MoreSettingItem"
+                android:background="@drawable/round_corner_item_middle_bg" >
+
+                <TextView
+                    style="@style/MoreItemTextStyle"
+                    android:drawableLeft="@drawable/ic_clear_cache"
+                    android:text="清除缓存" />
+
+                <TextView
+                    android:id="@+id/cache_size"
+                    style="@style/SettingAttributeText"
+                    android:drawableRight="@null" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/item_feedback"
+                style="@style/TextSettingItem"
+                android:background="@drawable/round_corner_item_below_bg"
+                android:drawableLeft="@drawable/ic_feedback"
+                android:text="意见反馈" 
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/item_out"
+                style="@style/MoreSettingItem"
+                android:layout_height="52dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_corner_item_single_bg"
+                android:gravity="center"
+                android:text="退出程序"
+                android:textSize="17sp" 
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+    
+</LinearLayout>

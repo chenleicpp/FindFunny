@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">找亮点</string>
+    <string name="action_refresh">刷新</string>
+    <string name="action_share">分享</string>
+    <string name="drawer_open">打开侧边栏</string>
+    <string name="drawer_close">关闭侧边栏</string>
+    <string name="action_settings">设置</string>
+</resources>

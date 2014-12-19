@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sanshisoft.findfunny" >
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppBaseTheme" >
+        <activity
+            android:name=".ui.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WelcomeTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.BaseActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.ImageViewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 分享编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 100424468，如果你使用的公用账号，则不需要修改；否则修改成你在QQ开放平台申请的 APP ID -->
+                <data android:scheme="tencent1103526767" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- ###################添加UmengAppkey###################### -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5472d5dafd98c55d91000d86" >
+        </meta-data>
+    </application>
+
+</manifest>
