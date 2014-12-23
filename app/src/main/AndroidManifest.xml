@@ -41,6 +41,9 @@
             android:name=".ui.ImageViewActivity"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
         <!-- 分享编辑页 -->
         <activity
             android:name="com.umeng.socialize.view.ShareActivity"
@@ -90,6 +93,9 @@
             android:name="UMENG_APPKEY"
             android:value="5472d5dafd98c55d91000d86" >
         </meta-data>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

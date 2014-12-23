@@ -14,6 +14,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -76,7 +78,8 @@ public class ImageViewActivity extends BaseActivity {
     private String imageUrl,abs;
     
     final UMSocialService mController = UMServiceFactory.getUMSocialService("com.umeng.share");
-    
+    @ViewInject(R.id.adView)
+    AdView adView;
     
     private Handler mHandler = new Handler(){
 
@@ -135,6 +138,12 @@ public class ImageViewActivity extends BaseActivity {
         });
         //初始化分享平台
         configPlatforms();
+
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .addTestDevice("039b8286437ead29")
+                .build();
+        adView.loadAd(adRequest);
 	}
 	
 	@Override
@@ -218,6 +227,7 @@ public class ImageViewActivity extends BaseActivity {
 		if (mAttacher != null) {
             mAttacher.cleanup();
         }
+        adView.destroy();
 	}
 	
 	public void showShare(){
@@ -360,6 +370,7 @@ public class ImageViewActivity extends BaseActivity {
 		// TODO Auto-generated method stub
 		super.onResume();
 		MobclickAgent.onResume(this);
+        adView.resume();
 	}
 	
 	@Override
@@ -367,5 +378,6 @@ public class ImageViewActivity extends BaseActivity {
 		// TODO Auto-generated method stub
 		super.onPause();
 		MobclickAgent.onPause(this);
+        adView.pause();
 	}
 }
